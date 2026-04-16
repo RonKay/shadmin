@@ -134,7 +134,7 @@ apiClient.interceptors.response.use(
 
     // If a refresh is already in flight, queue this request
     if (isRefreshing) {
-      return new Promise<RetryableConfig>((resolve, reject) => {
+      return new Promise((resolve, reject) => {
         failedQueue.push({
           resolve: (token: string) => {
             originalRequest._retry = true
@@ -160,7 +160,7 @@ apiClient.interceptors.response.use(
 
     try {
       const resp = await refreshClient.post('/api/v1/auth/refresh', {
-        refresh_token: currentRefreshToken,
+        refreshToken: currentRefreshToken,
       })
 
       const data = resp.data
