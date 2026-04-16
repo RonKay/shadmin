@@ -1,3 +1,4 @@
+import { registerAuthStoreReset } from '@/services/config'
 import { menuService } from '@/services/menu-service'
 import { getProfile } from '@/services/profileApi'
 import { type User } from '@/types/user'
@@ -9,7 +10,6 @@ import {
   setRefreshToken as persistRefreshToken,
   removeAllTokens,
 } from '@/lib/token-storage'
-import { registerAuthStoreReset } from '@/services/config'
 
 export interface AuthUser {
   accountNo: string

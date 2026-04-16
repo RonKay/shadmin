@@ -22,8 +22,8 @@ type Env struct {
 	// 令牌配置
 	AccessTokenExpiryMinute  int    `mapstructure:"ACCESS_TOKEN_EXPIRY_MINUTE"`
 	RefreshTokenExpiryMinute int    `mapstructure:"REFRESH_TOKEN_EXPIRY_MINUTE"`
-	AccessTokenSecret      string `mapstructure:"ACCESS_TOKEN_SECRET"`
-	RefreshTokenSecret     string `mapstructure:"REFRESH_TOKEN_SECRET"`
+	AccessTokenSecret        string `mapstructure:"ACCESS_TOKEN_SECRET"`
+	RefreshTokenSecret       string `mapstructure:"REFRESH_TOKEN_SECRET"`
 
 	// 管理员配置
 	AdminUsername string `mapstructure:"ADMIN_USERNAME"`
@@ -55,9 +55,9 @@ func setDefaults() {
 
 		// 令牌配置
 		"ACCESS_TOKEN_EXPIRY_MINUTE":  180,
-		"REFRESH_TOKEN_EXPIRY_MINUTE": 1440,
-		"ACCESS_TOKEN_SECRET":       "default-access-secret",
-		"REFRESH_TOKEN_SECRET":      "default-refresh-secret",
+		"REFRESH_TOKEN_EXPIRY_MINUTE": 1800,
+		"ACCESS_TOKEN_SECRET":         "default-access-secret",
+		"REFRESH_TOKEN_SECRET":        "default-refresh-secret",
 
 		// 管理员配置
 		"ADMIN_USERNAME": "admin",

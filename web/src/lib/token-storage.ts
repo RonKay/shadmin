@@ -2,7 +2,6 @@
  * Dependency-free token storage helpers.
  * Used by both auth-store and axios interceptors to avoid circular imports.
  */
-
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@/types/constants'
 
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 7 // 7 days
@@ -43,9 +42,7 @@ export function removeAccessToken() {
 // --- Refresh Token ---
 
 export function getRefreshToken(): string {
-  return (
-    getCookie(REFRESH_TOKEN) || localStorage.getItem(REFRESH_TOKEN) || ''
-  )
+  return getCookie(REFRESH_TOKEN) || localStorage.getItem(REFRESH_TOKEN) || ''
 }
 
 export function setRefreshToken(token: string) {
